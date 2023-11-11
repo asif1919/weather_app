@@ -22,3 +22,12 @@ Get the Api Key from this site : https://openweathermap.org/api
 
 
 ![weather help 2](https://github.com/asif1919/weather_app/assets/110787824/f5361fd4-f1e3-40ce-a55b-f885f2920109)
+
+<img src="https://github.com/asif1919/weather_app/assets/110787824/211ee493-6252-4687-be9d-000ba5fc96ba" alt="Screenshot_1699695914" width="300"/>
+
+---
+
+<img src="https://github.com/asif1919/weather_app/assets/110787824/fcd73ffe-b8f9-4841-9403-7597f7889e90" alt="Screenshot_20231111_153353" width="300"/>
+
+
+

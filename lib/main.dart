@@ -5,6 +5,7 @@ import 'package:weather_app/screen/weather_Screen.dart';
 
 import 'controller/location_Method_controller.dart';
 import 'controller/weather_Data_Controller.dart';
+import 'controller/weather_by_city_controller.dart';
  
 
 void main() {
@@ -36,7 +37,7 @@ class GetXBindings extends Bindings {
   void dependencies() {
     Get.put(LocationMethodController());
     Get.put(WeatherDataController());
- 
+    Get.put(WeatherByCityDataController());
   }
 
 }

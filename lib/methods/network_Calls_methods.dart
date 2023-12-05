@@ -14,7 +14,7 @@ class NetworkCaller {
       {required String lat, required String long}) async {
 
     // Use your Own Api Key . From = https://openweathermap.org/
-    var apiKey = "";
+    var apiKey = "f54a5c68f5b38d4719ff2cd73aa37e9e";
     
     try {
       final Response response = await get(
@@ -35,6 +35,39 @@ class NetworkCaller {
             isSuccess: false,
             statusCode: response.statusCode,
             returnData: jsonDecode(response.body));
+      }
+    } catch (e) {
+      debugPrint(e.toString());
+      return ResponseModel(
+          isSuccess: false, statusCode: -1, returnData: e.toString());
+    }
+  }
+   static Future<ResponseModel> getRequestByCity(
+      {required String city }) async {
+
+    // Use your Own Api Key . From = https://openweathermap.org/
+   
+    var apiKey = "f54a5c68f5b38d4719ff2cd73aa37e9e";
+    
+    try {
+      final Response response2 = await get(
+          Uri.parse(
+              'https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey'),
+          headers: {
+            'Content-type': 'application/json',
+            'Accept': 'application/json',
+          });
+      debugPrint(response2.body);
+      if (response2.statusCode == 200) {
+        return ResponseModel(
+            isSuccess: true,
+            statusCode: response2.statusCode,
+            returnData: jsonDecode(response2.body));
+      } else {
+        return ResponseModel(
+            isSuccess: false,
+            statusCode: response2.statusCode,
+            returnData: jsonDecode(response2.body));
       }
     } catch (e) {
       debugPrint(e.toString());

@@ -14,7 +14,7 @@ class NetworkCaller {
       {required String lat, required String long}) async {
 
     // Use your Own Api Key . From = https://openweathermap.org/
-    var apiKey = "f54a5c68f5b38d4719ff2cd73aa37e9e";
+    var apiKey = "";
     
     try {
       final Response response = await get(
@@ -47,7 +47,7 @@ class NetworkCaller {
 
     // Use your Own Api Key . From = https://openweathermap.org/
    
-    var apiKey = "f54a5c68f5b38d4719ff2cd73aa37e9e";
+    var apiKey = "";
     
     try {
       final Response response2 = await get(
